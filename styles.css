@@ -12,16 +12,22 @@ body {
 
 #widget {
   text-align: center;
+  width: 100%;            /* Ocupa todo el ancho del contenedor */
+  max-width: 400px;       /* Límite para que no se estire demasiado */
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 #marco {
-  display: inline-block;
+  display: block;         /* Cambio de inline-block a block para ocupar todo */
   background-color: #222;
   border: 8px solid #425A91;
   border-radius: 20px;
-  padding: 20px;
+  padding: 20px;          /* Padding fijo, pero puedes cambiarlo a % si quieres */
   box-shadow: 0 0 20px #425A91, inset 0 0 10px #add8e6;
   animation: glow 2s infinite alternate;
+  box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+  width: 100%;
 }
 
 @keyframes glow {
@@ -31,19 +37,23 @@ body {
 
 #hora {
   font-family: 'Pixelify Sans', cursive;
-  font-size: 24px;
+  font-size: 24px;        /* Puedes usar vw si quieres que escale, pero con 24px va bien */
   color: #fffacd;
   background-color: #000;
   border: 4px inset #425A91;
   padding: 10px 20px;
   border-radius: 10px;
-  width: fit-content;
+  width: fit-content;     /* Se ajusta al contenido */
+  max-width: 100%;        /* No desborda */
   margin: 0 auto 15px;
   text-shadow: 0 0 8px #425A91;
+  box-sizing: border-box;
 }
 
 #chibi {
-  width: 220px;
+  width: 100%;            /* Ocupa todo el ancho disponible */
+  max-width: 220px;       /* Tamaño máximo original */
+  height: auto;           /* Mantiene la proporción */
   border-radius: 10px;
   image-rendering: pixelated;
   display: block;
