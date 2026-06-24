@@ -2,33 +2,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&display=swap');
 
 body {
-  background-color: #111;
+  background: transparent;   /* ← Fondo transparente (elimina el negro) */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;         /* ← Cambié height por min-height para que se ajuste al contenido */
   margin: 0;
 }
 
 #widget {
   text-align: center;
-  width: 100%;            /* Ocupa todo el ancho del contenedor */
-  max-width: 400px;       /* Límite para que no se estire demasiado */
+  width: 100%;
+  max-width: 400px;
   margin: 0 auto;
   box-sizing: border-box;
+  background: transparent;   /* ← Asegura que el widget no tenga fondo */
 }
 
 #marco {
-  display: block;         /* Cambio de inline-block a block para ocupar todo */
-  background-color: #222;
+  display: block;
+  background-color: #222;    /* ← Este fondo interior se mantiene (el marco) */
   border: 8px solid #425A91;
   border-radius: 20px;
-  padding: 20px;          /* Padding fijo, pero puedes cambiarlo a % si quieres */
+  padding: 20px;
   box-shadow: 0 0 20px #425A91, inset 0 0 10px #add8e6;
   animation: glow 2s infinite alternate;
-  box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+  box-sizing: border-box;
   width: 100%;
 }
+
 
 @keyframes glow {
   from { box-shadow: 0 0 10px #425A91, inset 0 0 5px #add8e6; }
