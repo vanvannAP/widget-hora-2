@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&display=swap');
+
+body {
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#widget {
+  text-align: center;
+}
+
+#marco {
+  display: inline-block;
+  background-color: #222;
+  border: 8px solid #425A91;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 20px #425A91, inset 0 0 10px #add8e6;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 10px #425A91, inset 0 0 5px #add8e6; }
+  to { box-shadow: 0 0 20px #add8e6, inset 0 0 10px #425A91; }
+}
+
+#hora {
+  font-family: 'Pixelify Sans', cursive;
+  font-size: 24px;
+  color: #fffacd;
+  background-color: #000;
+  border: 4px inset #425A91;
+  padding: 10px 20px;
+  border-radius: 10px;
+  width: fit-content;
+  margin: 0 auto 15px;
+  text-shadow: 0 0 8px #425A91;
+}
+
+#chibi {
+  width: 220px;
+  border-radius: 10px;
+  image-rendering: pixelated;
+  display: block;
+  margin: 0 auto;
+}
