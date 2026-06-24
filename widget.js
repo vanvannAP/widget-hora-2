@@ -7,7 +7,7 @@ function actualizarChibi() {
   } else if (hora >= 13 && hora <= 17) {
     chibi.src = "src/chibi-pc.mp4";
   } else if (hora >= 18 && hora <= 22) {
-    chibi.src = "src/chibi_tv.mp4";
+    chibi.src = "src/chibi-tv.mp4";
   } else {
     chibi.src = "src/chibi-sleep.mp4";
   }
